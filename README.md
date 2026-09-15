@@ -65,6 +65,25 @@ bash run.sh \
 
 `ZING_PYTHON` defaults to `python3`. The runtime configuration is loaded from `config/zing.yaml`.
 
+### Serve with SGLang
+
+For realtime WebSocket serving, use
+[Zing-SGLang](https://github.com/seedleap/Zing-SGLang). Complete its
+[one-time setup](https://github.com/seedleap/Zing-SGLang/blob/main/ZING.md),
+then run from the Zing-SGLang repository:
+
+```bash
+ZING_MODEL_PATH=./models/Zing-0.5-SGLang \
+  examples/zing_0_5/launch_server.sh
+
+# In another terminal:
+python examples/zing_0_5/client.py \
+  --prompt "A first-person walk through a misty pine forest at sunrise" \
+  --action w \
+  --chunks 4 \
+  --output outputs/forest
+```
+
 ## Ready-to-Run World Rollouts
 
 Every JSONL file under `examples/` defines a complete world rollout and can be passed directly to `run.sh`. Image-initialized examples use their bundled reference images under `examples/assets/`.

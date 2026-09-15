@@ -65,6 +65,25 @@ bash run.sh \
 
 如果未设置 `ZING_PYTHON`，脚本将使用 `python3`。推理配置统一从 `config/zing.yaml` 读取。
 
+### 使用 SGLang 启动
+
+如需通过实时 WebSocket 服务运行模型，请使用
+[Zing-SGLang](https://github.com/seedleap/Zing-SGLang)。先完成其中的
+[一次性安装与模型下载](https://github.com/seedleap/Zing-SGLang/blob/main/ZING.md)，
+再在 Zing-SGLang 仓库中执行：
+
+```bash
+ZING_MODEL_PATH=./models/Zing-0.5-SGLang \
+  examples/zing_0_5/launch_server.sh
+
+# 在另一个终端中执行：
+python examples/zing_0_5/client.py \
+  --prompt "A first-person walk through a misty pine forest at sunrise" \
+  --action w \
+  --chunks 4 \
+  --output outputs/forest
+```
+
 ## 开箱即用的推演示例
 
 `examples/` 目录中的每个 JSONL 文件都描述了一次完整推演，可直接传给 `run.sh`。需要图像输入的示例已经在 `examples/assets/` 中附带对应的参考图。
