@@ -54,12 +54,20 @@ Zing Team · 2026 年 9 月 15 日 · 19 页
 
 ## 环境要求
 
+默认安装方式面向 NVIDIA CUDA：
+
 - Linux
 - 支持 CUDA 的 NVIDIA GPU
 - Python 3.11
 - 与 [requirements.txt](requirements.txt) 一致的依赖
 
+兼容的 AMD GPU 也可以通过 PyTorch SDPA 运行 ROCm 推理。请先单独安装
+ROCm 版 PyTorch，再安装 [requirements-rocm.txt](requirements-rocm.txt)；
+不要在 ROCm 环境中安装仅支持 CUDA 的 `flash-attn`。
+
 ## 快速开始
+
+### NVIDIA CUDA
 
 请在仓库根目录执行：
 
@@ -94,6 +102,63 @@ python examples/zing_0_5/client.py \
   --chunks 4 \
   --output outputs/forest
 ```
+
+### AMD ROCm
+
+按照 [ROCm 官方文档](https://rocm.docs.amd.com/en/latest/) 安装兼容的
+PyTorch 版本，然后安装其余依赖：
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip wheel
+# 按官方说明安装兼容的 ROCm 版 PyTorch。
+python -m pip install -r requirements-rocm.txt
+```
+
+加载模型前，先确认当前环境包含可以实际执行计算的 HIP build：
+
+```bash
+python - <<'PY'
+import torch
+
+assert torch.cuda.is_available()
+assert torch.version.hip
+properties = torch.cuda.get_device_properties(0)
+print(torch.__version__, torch.version.hip, properties.gcnArchName)
+x = torch.randn(8, 8, device="cuda", dtype=torch.bfloat16)
+assert torch.isfinite(x @ x).all()
+PY
+```
+
+首次运行时，使用数学 SDPA backend 执行五帧 smoke：
+
+```bash
+ZING_ATTENTION_BACKEND=sdpa-math \
+ZING_PYTHON=/path/to/.venv/bin/python \
+bash run.sh \
+  --pretrained-dir /path/to/Zing-0.5/pretrained \
+  --checkpoint /path/to/Zing-0.5/generator/model.pt \
+  --messages examples/rocm_smoke.jsonl \
+  --output-dir outputs/rocm-smoke \
+  --local-attn-size 33 \
+  --sink-size 5 \
+  --seed 0
+```
+
+默认的 `auto` 模式在 CUDA 上要求 external FlashAttention；缺少该包时会
+明确报错。在 ROCm 上，`auto` 使用可移植的 SDPA 数学 backend，并对较长的
+query 序列分块，将每次调用估算的 FP32 attention score 控制在 512 MiB
+以内。`ZING_ATTENTION_BACKEND=sdpa` 会让 PyTorch 自动选择 fused backend；
+依赖它之前，必须在实际 GPU、PyTorch build 和生产序列长度上验证输出。
+512 MiB 只限制 score 估算，不包括 backend 的其他中间结果或模型显存；
+chunked math 是兼容路径，并不是 fused attention 的等性能替代。
+PyTorch 在 CUDA 和 ROCm 上都使用 `torch.cuda` API 和 `cuda` 设备字符串。
+
+ROCm kernel 的可用性和数值行为会随 GPU 与 PyTorch build 变化。请检查实际
+生成的 smoke 视频；仅仅成功导入包、枚举设备或生成非空文件不能证明结果
+正确。五帧 smoke 也不能验证长 rollout 序列长度下的内存和性能。性能和
+数值结果可能与 CUDA FlashAttention 不同。
 
 ## 开箱即用的推演示例
 

@@ -1,0 +1,1 @@
+{"schema_version":2,"sample_id":"rocm-smoke","messages":[{"role":"user","type":"text","content":"A quiet lake at sunrise"},{"role":"target","type":"video","reference_frame_count":0,"output":{"frames":5,"height":480,"width":832},"controls":[]}]}

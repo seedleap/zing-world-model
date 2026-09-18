@@ -13,7 +13,7 @@ from .scheduler import DmdScheduler
 class InferencePipeline:
     def __init__(self, config: ZingConfig, pretrained_dir: str | Path, checkpoint: str | Path):
         if not torch.cuda.is_available():
-            raise RuntimeError("CUDA is required")
+            raise RuntimeError("A CUDA or ROCm HIP GPU is required")
         self.config = config
         self.device = torch.device("cuda:0")
         pretrained_path = Path(pretrained_dir)

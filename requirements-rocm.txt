@@ -1,0 +1,13 @@
+# Install a compatible PyTorch ROCm build before this file.
+# torch and the CUDA-only flash-attn package are intentionally omitted.
+
+accelerate==1.13.0
+av==13.1.0
+diffusers==0.35.0
+numpy==2.2.6
+pillow==11.3.0
+PyYAML==6.0.3
+safetensors==0.4.5
+sentencepiece==0.2.1
+tqdm==4.67.1
+transformers==4.56.0
