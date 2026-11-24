@@ -8,20 +8,62 @@
 
 [English](README.md) | [简体中文](README_zh-CN.md)
 
-<a href="https://zing.loopit.me/"><img src="assets/zing-logo-symbol.svg" alt="" height="16"> Project Page</a> · <a href="https://github.com/seedleap/zing-world-model"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> GitHub</a> · <a href="https://github.com/seedleap/Zing-SGLang"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> SGLang Inference</a> · <a href="https://huggingface.co/seedleap/zing-0.5"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" height="16"> Hugging Face</a> · <a href="https://modelscope.cn/models/seedleap/Zing-0.5"><img src="https://g.alicdn.com/sail-web/maas/2.13.133/favicon/128.ico" alt="" height="16"> ModelScope</a> · <a href="docs/Zing-0.5.pdf"><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/file-text-16.svg" alt="" height="16"> Paper (PDF)</a>
+<a href="https://zing.loopit.me/"><img src="assets/zing-logo-symbol.svg" alt="" height="16"> Project Page</a> · <a href="https://github.com/seedleap/zing-world-model"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> GitHub</a> · <a href="https://github.com/seedleap/Zing-SGLang"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> SGLang Inference</a> · <a href="https://huggingface.co/seedleap/zing-0.5"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" height="16"> Hugging Face</a> · <a href="https://modelscope.cn/models/seedleap/Zing-0.5"><img src="https://g.alicdn.com/sail-web/maas/2.13.133/favicon/128.ico" alt="" height="16"> ModelScope</a> · <a href="https://arxiv.org/pdf/2611.27336"><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/file-text-16.svg" alt="" height="16"> Zing-1.0 Paper</a> · <a href="docs/Zing-0.5.pdf"><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/file-text-16.svg" alt="" height="16"> Zing-0.5 Paper</a>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2609.17909-b31b1b.svg)](https://arxiv.org/abs/2609.17909)
+[![arXiv Zing-1.0](https://img.shields.io/badge/arXiv%20Zing--1.0-2611.27336-b31b1b.svg)](https://arxiv.org/abs/2611.27336)
+[![arXiv Zing-0.5](https://img.shields.io/badge/arXiv%20Zing--0.5-2609.17909-b31b1b.svg)](https://arxiv.org/abs/2609.17909)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.9-EE4C2C.svg)
 
 </div>
 
-Developed by the Seedleap.ai team (涌跃智能), Zing 0.5 is an efficient causal world model built for real-time interaction. It continuously rolls out a visual world from its current state while text prompts and keyboard actions alter the world's semantics, motion, and future state as it unfolds.
+## 🔥 News
+
+> [!NOTE]
+> **[Nov 24, 2026]: 🔥 We release the Zing-1.0 technical report on [arXiv](https://arxiv.org/abs/2611.27336) ([PDF](https://arxiv.org/pdf/2611.27336)), introducing a Playable World System built on Controllable Rendering.**
+
+- [Sep 16, 2026]: 📄 Our Zing-0.5 technical report is now available on [arXiv](https://arxiv.org/abs/2609.17909) ([PDF](docs/Zing-0.5.pdf)), presenting real-time joint action and text control for playable worlds.
+- [Sep 14, 2026]: ⚡ [Zing-SGLang](https://github.com/seedleap/Zing-SGLang) is released, providing SGLang-based inference and real-time WebSocket serving for Zing-0.5.
+- [Aug 26, 2026]: 🏆 Zing-0.5 ranks No. 2 overall on the [WBench leaderboard](https://meituan-longcat.github.io/WBench/#leaderboard) and No. 1 among real-time world models.
+- [Aug 26, 2026]: 🎉 Zing-0.5 is released.
+
+## 📄 Papers
+
+### <img src="assets/zing-logo-symbol.svg" alt="" height="18"> [Zing-1.0: A Playable World System Built on Controllable Rendering](https://arxiv.org/abs/2611.27336)
+
+[![arXiv](https://img.shields.io/badge/arXiv-2611.27336-b31b1b.svg)](https://arxiv.org/abs/2611.27336) [![PDF](https://img.shields.io/badge/Paper-PDF-blue.svg)](https://arxiv.org/pdf/2611.27336)
+
+Zing Team · November 20, 2026 · 34 pages
+
+The report formulates Controllable Rendering as an implementation-independent specification for a Playable World System, combining WorldKit (an AI-native engine for coding agents to build and run executable proxy worlds), a block-causal streaming video renderer based on MiniMax-H3, and a real-time Interaction Runtime.
+
+### <img src="assets/zing-logo-symbol.svg" alt="" height="18"> [Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control](https://arxiv.org/abs/2609.17909)
+
+[![arXiv](https://img.shields.io/badge/arXiv-2609.17909-b31b1b.svg)](https://arxiv.org/abs/2609.17909) [![PDF](https://img.shields.io/badge/Paper-PDF-blue.svg)](docs/Zing-0.5.pdf)
+
+Zing Team · September 15, 2026 · 19 pages
+
+The report introduces Zing-0.5, a 5B autoregressive world model designed for playability, combining unified keyboard and online text control, event-scale teacher supervision for block-causal distillation, and low-cost real-time streaming inference.
+
+## 🌍 Zing-0.5 Overview
+
+Developed by the Seedleap.ai team, Zing 0.5 is an efficient causal world model built for real-time interaction. It continuously rolls out a visual world from its current state while text prompts and keyboard actions alter the world's semantics, motion, and future state as it unfolds.
 
 Text prompts can initialize the world or change it during a rollout. Continuous W/A/S/D/I/J/K/L keyboard actions steer movement and interaction. A causal KV cache and four-step DMD sampling support responsive, long-horizon world rollouts in a compact single-GPU pipeline.
 
 This inference release represents an interaction session as timestamped prompt and keyboard controls in JSONL. The model consumes those controls causally and records the resulting world rollout as video; interactive applications can map their prompt and keyboard events to the same control schema.
+
+## 💻 Requirements
+
+- Linux
+- A CUDA-capable NVIDIA GPU
+- Python 3.11
+- Dependencies matching [requirements.txt](requirements.txt)
+
+## 🚀 Quick Start
+
+### Model Directory Layout
 
 The runtime expects a model directory with this layout:
 
@@ -37,29 +79,7 @@ Zing-0.5/
 
 `generator/model.pt` must directly contain the generator state dict. Parameter names and shapes are matched strictly; wrapped checkpoints, renamed parameter prefixes, adapters, and partial state dicts are not accepted.
 
-## Paper
-
-**[Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control](https://arxiv.org/abs/2609.17909)**
-
-Zing Team · September 15, 2026 · 19 pages
-
-The report describes joint keyboard and online text control, segment-level teacher supervision for block-level generation, and low-cost real-time inference, with quantitative results and a discussion of persistent world state.
-
-## News
-
-- [Sep 16, 2026]: Our Zing-0.5 technical report is now available on [arXiv](https://arxiv.org/abs/2609.17909) ([PDF](docs/Zing-0.5.pdf)), presenting real-time joint action and text control for playable worlds.
-- [Sep 14, 2026]: [Zing-SGLang](https://github.com/seedleap/Zing-SGLang) is released, providing SGLang-based inference and real-time WebSocket serving for Zing-0.5.
-- [Aug 26, 2026]: Zing-0.5 ranks No. 2 overall on the [WBench leaderboard](https://meituan-longcat.github.io/WBench/#leaderboard) and No. 1 among real-time world models. 🏆
-- [Aug 26, 2026]: Zing-0.5 is released. 🎉
-
-## Requirements
-
-- Linux
-- A CUDA-capable NVIDIA GPU
-- Python 3.11
-- Dependencies matching [requirements.txt](requirements.txt)
-
-## Quick Start
+### Run Inference
 
 Run commands from the repository root:
 
@@ -95,7 +115,7 @@ python examples/zing_0_5/client.py \
   --output outputs/forest
 ```
 
-## Ready-to-Run World Rollouts
+## 🎬 Ready-to-Run World Rollouts
 
 Every JSONL file under `examples/` defines a complete world rollout and can be passed directly to `run.sh`. Image-initialized examples use their bundled reference images under `examples/assets/`.
 
@@ -108,7 +128,7 @@ Every JSONL file under `examples/` defines a complete world rollout and can be p
 
 Replace `...` with the same `--pretrained-dir` and `--checkpoint` arguments shown in Quick Start.
 
-## Input Format
+## 📝 Input Format
 
 The input is a JSONL interaction timeline with one independent world rollout per line. The `user/text` message defines the initial world, while the `target/video` message defines the rollout and its controls.
 
@@ -116,25 +136,14 @@ The input is a JSONL interaction timeline with one independent world rollout per
 {"sample_id":"demo","messages":[{"role":"user","type":"text","content":"A quiet lake at sunrise"},{"role":"target","type":"video","reference_frame_count":0,"output":{"frames":31,"height":480,"width":832},"controls":[]}]}
 ```
 
-### Text-Prompt Rollout
-
-Set `reference_frame_count` to `0` and omit `uri`. The text prompt initializes the visual world.
-
-### Image-Initialized Rollout
-
-Set `reference_frame_count` to `1` and provide a local image path in `uri`. The image initializes the world state. `output.frames` excludes the reference image, while the recorded rollout includes it as its first frame.
-
-### Keyboard Action Control
-
-Add one `keyboard_direction_frame_interval` control to steer the world as it runs. `actions` must have shape `[N, 8]`, with values in `[0, 1]` ordered as W/A/S/D/I/J/K/L. For a text-initialized rollout, `N = output.frames - 1`; for an image-initialized rollout, `N = output.frames`.
-
-### Prompt-Driven State Changes
-
-Add one `text_prompt_interval` control to change the world's semantics and future evolution during a rollout. It uses `[start, end)` pixel-frame intervals. Intervals must be ordered, gap-free, non-overlapping, and valid after conversion to the latent timeline.
+- **Text-Prompt Rollout**: Set `reference_frame_count` to `0` and omit `uri`. The text prompt initializes the visual world.
+- **Image-Initialized Rollout**: Set `reference_frame_count` to `1` and provide a local image path in `uri`. The image initializes the world state. `output.frames` excludes the reference image, while the recorded rollout includes it as its first frame.
+- **Keyboard Action Control**: Add one `keyboard_direction_frame_interval` control to steer the world as it runs. `actions` must have shape `[N, 8]`, with values in `[0, 1]` ordered as W/A/S/D/I/J/K/L. For a text-initialized rollout, `N = output.frames - 1`; for an image-initialized rollout, `N = output.frames`.
+- **Prompt-Driven State Changes**: Add one `text_prompt_interval` control to change the world's semantics and future evolution during a rollout. It uses `[start, end)` pixel-frame intervals. Intervals must be ordered, gap-free, non-overlapping, and valid after conversion to the latent timeline.
 
 Height and width must be divisible by 32. The reference frame count plus generated frame count must follow the `1 + 4N` temporal structure.
 
-## Sliding-Window Inference
+## ⚡ Sliding-Window Inference
 
 The default sliding-window configuration is `97/9`. It is recommended for offline inference on an NVIDIA H100 or a GPU with at least 80 GB of memory. Both values follow the VAE's `4N+1` temporal structure:
 
@@ -156,9 +165,33 @@ bash run.sh ... --local-attn-size -1 --sink-size 0
 
 The sink remains visible throughout the rollout. After a prompt-driven state change, the first block of the new prompt is pinned when it leaves the regular tail window. These options affect only runtime cache behavior and do not change checkpoint parameter names.
 
-## License
+## 📜 License
 
 Zing is released under the [Apache License 2.0](LICENSE).
+
+## 🙏 Acknowledgements
+
+We thank the teams behind [Wan2.2 TI2V-5B](https://github.com/Wan-Video/Wan2.2), [minWM](https://github.com/shengshu-ai/minWM), [WBench](https://github.com/meituan-longcat/WBench), and [LongLive](https://github.com/NVlabs/LongLive) for their open-source work.
+
+## 📖 Citation
+
+If you find Zing useful for your research or applications, please consider citing our papers:
+
+```bibtex
+@article{zhang2026zing1,
+  title={Zing-1.0: A Playable World System Built on Controllable Rendering},
+  author={Wenbo Zhang and Guoli Zhang and Xuewen Yu and Xueliang Yang and Jiangqiao Yan and Teng Xia and Xinmiao Wu and Zeyang Tian and Haoze Sun and Jinghui Niu and Hongli Ning and Zhiyuan Liu and Xinna Liu and Weimin Liu and Jialin Liu and Tianpeng Li and Kejun Li and Jun Li and Jiawen Li and Yirong He and Haoyuan Guo and Bosheng Gong and Junhao Gao and Xiaoxiao Fu and Xuezhi Chen and Shengdong Chen and Mingyang Chen and Diying Chen and Yinglun Chai and Yiwen Cai},
+  journal={arXiv preprint arXiv:2611.27336},
+  year={2026}
+}
+
+@article{chen2026zing05,
+  title={Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control},
+  author={Mingyang Chen and Shengdong Chen and Xiaoxiao Fu and Bosheng Gong and Haoyuan Guo and Bowen Li and Jiawen Li and Kejun Li and Tianpeng Li and Yin Liu and Haoze Sun and Zeyang Tian and Meng Wang and Xinmiao Wu and Jiangqiao Yan and Zining Zhao},
+  journal={arXiv preprint arXiv:2609.17909},
+  year={2026}
+}
+```
 
 ---
 
@@ -174,7 +207,3 @@ Scan to download the Loopit app<br>
 [Official Website](https://loopit.me/) · [Download Loopit](https://loopit.me/get)
 
 </div>
-
-## Acknowledgements
-
-We thank the teams behind [Wan2.2 TI2V-5B](https://github.com/Wan-Video/Wan2.2), [minWM](https://github.com/shengshu-ai/minWM), [WBench](https://github.com/meituan-longcat/WBench), and [LongLive](https://github.com/NVlabs/LongLive) for their open-source work.
