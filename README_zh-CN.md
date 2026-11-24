@@ -8,20 +8,62 @@
 
 [English](README.md) | [简体中文](README_zh-CN.md)
 
-<a href="https://zing.loopit.me/"><img src="assets/zing-logo-symbol.svg" alt="" height="16"> 项目主页</a> · <a href="https://github.com/seedleap/zing-world-model"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> GitHub</a> · <a href="https://github.com/seedleap/Zing-SGLang"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> SGLang 推理</a> · <a href="https://huggingface.co/seedleap/zing-0.5"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" height="16"> Hugging Face</a> · <a href="https://modelscope.cn/models/seedleap/Zing-0.5"><img src="https://g.alicdn.com/sail-web/maas/2.13.133/favicon/128.ico" alt="" height="16"> ModelScope</a> · <a href="docs/Zing-0.5.pdf"><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/file-text-16.svg" alt="" height="16"> 论文（PDF）</a>
+<a href="https://zing.loopit.me/"><img src="assets/zing-logo-symbol.svg" alt="" height="16"> 项目主页</a> · <a href="https://github.com/seedleap/zing-world-model"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> GitHub</a> · <a href="https://github.com/seedleap/Zing-SGLang"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="" height="16"> SGLang 推理</a> · <a href="https://huggingface.co/seedleap/zing-0.5"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" height="16"> Hugging Face</a> · <a href="https://modelscope.cn/models/seedleap/Zing-0.5"><img src="https://g.alicdn.com/sail-web/maas/2.13.133/favicon/128.ico" alt="" height="16"> ModelScope</a> · <a href="https://arxiv.org/pdf/2611.27336"><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/file-text-16.svg" alt="" height="16"> Zing-1.0 论文</a> · <a href="docs/Zing-0.5.pdf"><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/file-text-16.svg" alt="" height="16"> Zing-0.5 论文</a>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2609.17909-b31b1b.svg)](https://arxiv.org/abs/2609.17909)
+[![arXiv Zing-1.0](https://img.shields.io/badge/arXiv%20Zing--1.0-2611.27336-b31b1b.svg)](https://arxiv.org/abs/2611.27336)
+[![arXiv Zing-0.5](https://img.shields.io/badge/arXiv%20Zing--0.5-2609.17909-b31b1b.svg)](https://arxiv.org/abs/2609.17909)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.9-EE4C2C.svg)
 
 </div>
 
-Zing 0.5 是由 Seedleap.ai（涌跃智能）团队研发的高效因果世界模型，专为实时交互而设计。模型能够从当前状态出发，持续预测并生成后续画面；在推演过程中，用户可以随时输入文本提示词或键盘操作，实时改变场景内容、运动方式和后续演化。
+## 🔥 新闻
+
+> [!NOTE]
+> **[2026 年 11 月 24 日]：🔥 正式发布 Zing-1.0 技术报告（[arXiv](https://arxiv.org/abs/2611.27336) | [PDF](https://arxiv.org/pdf/2611.27336)），提出基于可控渲染（Controllable Rendering）的可玩世界系统。**
+
+- [2026 年 9 月 16 日]：📄 Zing-0.5 技术报告已发布于 [arXiv](https://arxiv.org/abs/2609.17909)（[PDF](docs/Zing-0.5.pdf)），介绍面向可玩世界的实时动作与文本联合控制。
+- [2026 年 9 月 14 日]：⚡ [Zing-SGLang](https://github.com/seedleap/Zing-SGLang) 已发布，提供基于 SGLang 的 Zing-0.5 推理与实时 WebSocket 服务。
+- [2026 年 8 月 26 日]：🏆 Zing-0.5 位列 [WBench 总榜](https://meituan-longcat.github.io/WBench/#leaderboard)第二，并在实时世界模型中排名第一。
+- [2026 年 8 月 26 日]：🎉 Zing-0.5 正式发布。
+
+## 📄 论文
+
+### <img src="assets/zing-logo-symbol.svg" alt="" height="18"> [Zing-1.0: A Playable World System Built on Controllable Rendering](https://arxiv.org/abs/2611.27336)
+
+[![arXiv](https://img.shields.io/badge/arXiv-2611.27336-b31b1b.svg)](https://arxiv.org/abs/2611.27336) [![PDF](https://img.shields.io/badge/Paper-PDF-blue.svg)](https://arxiv.org/pdf/2611.27336)
+
+Zing Team · 2026 年 11 月 20 日 · 34 页
+
+论文系统阐述了基于可控渲染（Controllable Rendering）的可玩世界系统规范，结合 WorldKit（供 Coding Agent 构建并运行可执行代理世界的 AI 原生引擎）、基于 MiniMax-H3 的分块因果流式视频渲染器，以及实时交互运行时。
+
+### <img src="assets/zing-logo-symbol.svg" alt="" height="18"> [Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control](https://arxiv.org/abs/2609.17909)
+
+[![arXiv](https://img.shields.io/badge/arXiv-2609.17909-b31b1b.svg)](https://arxiv.org/abs/2609.17909) [![PDF](https://img.shields.io/badge/Paper-PDF-blue.svg)](docs/Zing-0.5.pdf)
+
+Zing Team · 2026 年 9 月 15 日 · 19 页
+
+论文介绍了面向可玩性的 5B 自回归世界模型 Zing-0.5，结合键盘与在线文本统一控制、面向分块因果蒸馏的事件级教师监督，以及低成本实时流式推理。
+
+## 🌍 Zing-0.5 简介
+
+Zing 0.5 是由 Seedleap.ai 团队研发的高效因果世界模型，专为实时交互而设计。模型能够从当前状态出发，持续预测并生成后续画面；在推演过程中，用户可以随时输入文本提示词或键盘操作，实时改变场景内容、运动方式和后续演化。
 
 文本提示词既可以创建初始世界，也可以在运行过程中切换场景。连续输入 W/A/S/D/I/J/K/L 键可控制移动与交互。借助因果 KV 缓存和四步 DMD 采样，模型能够在单张 GPU 上实现低延迟、长时序的世界推演。
 
 本仓库使用 JSONL 描述交互时间线，其中包含按时间排列的文本提示词和键盘操作。模型会按照因果顺序处理这些输入，并将推演过程保存为视频。接入实时应用时，只需将文本输入和键盘事件转换为相同的控制格式。
+
+## 💻 环境要求
+
+- Linux
+- 支持 CUDA 的 NVIDIA GPU
+- Python 3.11
+- 与 [requirements.txt](requirements.txt) 一致的依赖
+
+## 🚀 快速开始
+
+### 模型目录结构
 
 模型文件应按以下目录结构放置，其中 `generator/` 与 `pretrained/` 位于同一级目录：
 
@@ -37,29 +79,7 @@ Zing-0.5/
 
 `generator/model.pt` 中应直接存放生成器的参数字典（state dict），文件中的参数名和形状必须与模型完全一致。如果文件还包含训练状态等外层字段、参数名前缀已被修改、带有额外的 Adapter 参数，或缺少模型参数，加载都会失败。
 
-## 论文
-
-**[Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control](https://arxiv.org/abs/2609.17909)**
-
-Zing Team · 2026 年 9 月 15 日 · 19 页
-
-论文介绍了键盘与在线文本联合控制、片段级教师对分块生成的监督，以及低成本实时推理，并报告定量评测结果、讨论世界状态持久性问题。
-
-## 新闻
-
-- [2026 年 9 月 16 日]：Zing-0.5 技术报告已发布于 [arXiv](https://arxiv.org/abs/2609.17909)（[PDF](docs/Zing-0.5.pdf)），介绍面向可玩世界的实时动作与文本联合控制。
-- [2026 年 9 月 14 日]：[Zing-SGLang](https://github.com/seedleap/Zing-SGLang) 已发布，提供基于 SGLang 的 Zing-0.5 推理与实时 WebSocket 服务。
-- [2026 年 8 月 26 日]：Zing-0.5 位列 [WBench 总榜](https://meituan-longcat.github.io/WBench/#leaderboard)第二，并在实时世界模型中排名第一。🏆
-- [2026 年 8 月 26 日]：Zing-0.5 正式发布。🎉
-
-## 环境要求
-
-- Linux
-- 支持 CUDA 的 NVIDIA GPU
-- Python 3.11
-- 与 [requirements.txt](requirements.txt) 一致的依赖
-
-## 快速开始
+### 运行推理
 
 请在仓库根目录执行：
 
@@ -95,7 +115,7 @@ python examples/zing_0_5/client.py \
   --output outputs/forest
 ```
 
-## 开箱即用的推演示例
+## 🎬 开箱即用的推演示例
 
 `examples/` 目录中的每个 JSONL 文件都描述了一次完整推演，可直接传给 `run.sh`。需要图像输入的示例已经在 `examples/assets/` 中附带对应的参考图。
 
@@ -108,7 +128,7 @@ python examples/zing_0_5/client.py \
 
 请将命令中的 `...` 替换为“快速开始”所示的 `--pretrained-dir` 和 `--checkpoint` 参数。
 
-## 输入格式
+## 📝 输入格式
 
 输入采用 JSONL 格式，每行描述一次独立的世界推演。`user/text` 消息用于定义初始世界，`target/video` 消息用于指定生成范围和交互控制。
 
@@ -116,25 +136,14 @@ python examples/zing_0_5/client.py \
 {"sample_id":"demo","messages":[{"role":"user","type":"text","content":"日出时分的宁静湖面"},{"role":"target","type":"video","reference_frame_count":0,"output":{"frames":31,"height":480,"width":832},"controls":[]}]}
 ```
 
-### 文本初始化
-
-将 `reference_frame_count` 设为 `0`，并省略 `uri`。模型将根据文本提示词生成初始世界。
-
-### 图像初始化
-
-将 `reference_frame_count` 设为 `1`，并通过 `uri` 指定本地图片路径。该图片将作为世界的初始状态。`output.frames` 仅表示待生成的帧数，不包含参考图；最终视频会将参考图作为第一帧。
-
-### 键盘操作控制
-
-添加一个 `keyboard_direction_frame_interval` 控制项，即可在推演过程中持续输入键盘操作。`actions` 的形状必须为 `[N, 8]`，取值范围为 `[0, 1]`，八个维度依次对应 W/A/S/D/I/J/K/L。使用文本初始化时，`N = output.frames - 1`；使用图像初始化时，`N = output.frames`。
-
-### 运行中切换文本提示词
-
-添加一个 `text_prompt_interval` 控制项，可以在推演过程中改变场景内容及后续演化。时间范围使用像素帧区间 `[start, end)` 表示。各区间必须按顺序排列、首尾相接且互不重叠；映射到潜空间时间轴后，每个区间仍须至少包含一个有效时间步。
+- **文本初始化**：将 `reference_frame_count` 设为 `0`，并省略 `uri`。模型将根据文本提示词生成初始世界。
+- **图像初始化**：将 `reference_frame_count` 设为 `1`，并通过 `uri` 指定本地图片路径。该图片将作为世界的初始状态。`output.frames` 仅表示待生成的帧数，不包含参考图；最终视频会将参考图作为第一帧。
+- **键盘操作控制**：添加一个 `keyboard_direction_frame_interval` 控制项，即可在推演过程中持续输入键盘操作。`actions` 的形状必须为 `[N, 8]`，取值范围为 `[0, 1]`，八个维度依次对应 W/A/S/D/I/J/K/L。使用文本初始化时，`N = output.frames - 1`；使用图像初始化时，`N = output.frames`。
+- **运行中切换文本提示词**：添加一个 `text_prompt_interval` 控制项，可以在推演过程中改变场景内容及后续演化。时间范围使用像素帧区间 `[start, end)` 表示。各区间必须按顺序排列、首尾相接且互不重叠；映射到潜空间时间轴后，每个区间仍须至少包含一个有效时间步。
 
 输出宽高必须是 32 的倍数。参考帧数与生成帧数之和必须满足 `1 + 4N` 的时间结构。
 
-## 滑动窗口推理
+## ⚡ 滑动窗口推理
 
 默认滑动窗口配置为 `97/9`，推荐用于 NVIDIA H100 或显存不低于 80GB 的 GPU 进行离线推理。两个数值均满足 VAE 的 `4N+1` 时间结构：
 
@@ -156,9 +165,33 @@ bash run.sh ... --local-attn-size -1 --sink-size 0
 
 `sink_size` 指定的前缀帧在整个推演过程中始终参与注意力计算。切换文本提示词后，新提示词对应的首个分块即使滑出常规尾部窗口，也会继续固定保留。这两个参数只影响运行时的 KV 缓存，不会改变模型权重中的参数名称。
 
-## 开源协议
+## 📜 开源协议
 
 Zing 基于 [Apache License 2.0](LICENSE) 开源。
+
+## 🙏 致谢
+
+感谢 [Wan2.2 TI2V-5B](https://github.com/Wan-Video/Wan2.2)、[minWM](https://github.com/shengshu-ai/minWM)、[WBench](https://github.com/meituan-longcat/WBench) 和 [LongLive](https://github.com/NVlabs/LongLive) 团队的开源工作。
+
+## 📖 引用
+
+如果 Zing 对你的研究或项目有所帮助，欢迎引用我们的论文：
+
+```bibtex
+@article{zhang2026zing1,
+  title={Zing-1.0: A Playable World System Built on Controllable Rendering},
+  author={Wenbo Zhang and Guoli Zhang and Xuewen Yu and Xueliang Yang and Jiangqiao Yan and Teng Xia and Xinmiao Wu and Zeyang Tian and Haoze Sun and Jinghui Niu and Hongli Ning and Zhiyuan Liu and Xinna Liu and Weimin Liu and Jialin Liu and Tianpeng Li and Kejun Li and Jun Li and Jiawen Li and Yirong He and Haoyuan Guo and Bosheng Gong and Junhao Gao and Xiaoxiao Fu and Xuezhi Chen and Shengdong Chen and Mingyang Chen and Diying Chen and Yinglun Chai and Yiwen Cai},
+  journal={arXiv preprint arXiv:2611.27336},
+  year={2026}
+}
+
+@article{chen2026zing05,
+  title={Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control},
+  author={Mingyang Chen and Shengdong Chen and Xiaoxiao Fu and Bosheng Gong and Haoyuan Guo and Bowen Li and Jiawen Li and Kejun Li and Tianpeng Li and Yin Liu and Haoze Sun and Zeyang Tian and Meng Wang and Xinmiao Wu and Jiangqiao Yan and Zining Zhao},
+  journal={arXiv preprint arXiv:2609.17909},
+  year={2026}
+}
+```
 
 ---
 
@@ -174,7 +207,3 @@ Zing 基于 [Apache License 2.0](LICENSE) 开源。
 [官方网站](https://loopit.me/) · [下载 Loopit](https://loopit.me/get)
 
 </div>
-
-## 致谢
-
-感谢 [Wan2.2 TI2V-5B](https://github.com/Wan-Video/Wan2.2)、[minWM](https://github.com/shengshu-ai/minWM)、[WBench](https://github.com/meituan-longcat/WBench) 和 [LongLive](https://github.com/NVlabs/LongLive) 团队的开源工作。
